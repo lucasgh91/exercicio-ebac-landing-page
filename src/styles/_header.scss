@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: right;
+
+  &__container {
+    padding: 15px 50px;
+  }
+
+  &__image {
+    max-width: 100px;
+    width: 100%;
+    opacity: .5;
+    transition: all .5s ease;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+  }
+}

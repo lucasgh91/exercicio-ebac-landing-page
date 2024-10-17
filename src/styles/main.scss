@@ -1,0 +1,54 @@
+@use 'header';
+@use 'hero';
+@use 'description';
+
+@font-face {
+  font-family: Cocogoose;
+  src: url(../../assets/fonts/Cocogoose-Classic-Medium.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Cocogoose;
+  src: url(../../assets/fonts/Cocogoose-Classic-ExtraBold.ttf);
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Cocogoose, sans-serif;
+  color: white;
+
+  &::selection {
+    background-color: rgba(0, 0, 0, 0.29);
+  }
+}
+
+
+@mixin text($fontSize: 20px) {
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
+}
+
+@mixin title($fontSize: 36px) {
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
+}
+
+.text {
+  @include text;
+}
+
+.text--small {
+  @include text(14px);
+}
+
+.title {
+  @include title;
+}
+
+.secondary-text {
+  color: rgba(255,255,255,0.5);
+}

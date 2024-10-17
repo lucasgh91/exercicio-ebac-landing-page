@@ -1,0 +1,27 @@
+.movie-description {
+  background-color: rgb(74 63 54);
+  width: 100%;
+
+  &__container {
+    display: flex;
+    padding: 4vw;
+    column-gap: 40px;
+  }
+
+  &__watch,
+  &__crews {
+    flex: 1;
+    margin-top: 50px;
+  }
+
+  &__details {
+    flex: 2;
+
+    &__genre-year {
+      font-family: sans-serif;
+      font-weight: bold;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+  }
+}
