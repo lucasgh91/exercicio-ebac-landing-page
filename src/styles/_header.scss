@@ -1,4 +1,6 @@
 .header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: right;
 
@@ -7,7 +9,7 @@
   }
 
   &__image {
-    max-width: 100px;
+    max-width: 70px;
     width: 100%;
     opacity: .5;
     transition: all .5s ease;

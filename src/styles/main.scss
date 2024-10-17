@@ -1,6 +1,8 @@
 @use 'header';
 @use 'hero';
 @use 'description';
+@use 'movie-crew';
+@use 'trailer';
 
 @font-face {
   font-family: Cocogoose;
@@ -20,10 +22,15 @@
   padding: 0;
   font-family: Cocogoose, sans-serif;
   color: white;
+  list-style: none;
 
   &::selection {
     background-color: rgba(0, 0, 0, 0.29);
   }
+}
+
+body {
+  overflow-x: hidden;
 }
 
 
@@ -51,4 +58,8 @@
 
 .secondary-text {
   color: rgba(255,255,255,0.5);
+}
+
+.sans {
+  font-family: sans-serif;
 }
