@@ -1,8 +1,11 @@
 @use 'header';
 @use 'hero';
 @use 'description';
-@use 'movie-crew';
 @use 'trailer';
+@use 'wallpapers';
+@use 'movie-crew';
+@use 'curiosities';
+@use 'footer';
 
 @font-face {
   font-family: Cocogoose;
@@ -34,7 +37,7 @@ body {
 }
 
 
-@mixin text($fontSize: 20px) {
+@mixin text($fontSize: 16px) {
   font-size: $fontSize;
   line-height: $fontSize + 10px;
 }
@@ -49,7 +52,7 @@ body {
 }
 
 .text--small {
-  @include text(14px);
+  @include text(12px);
 }
 
 .title {

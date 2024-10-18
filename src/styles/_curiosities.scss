@@ -1,0 +1,40 @@
+.curiosities {
+  background-color: #4d4740;
+
+  &__container {
+    padding: 5vw 10vw;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    img {
+      opacity: .4;
+    }
+  }
+  }
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  img {
+    height: auto;
+    opacity: .2;
+    transition: opacity .5s ease;
+  }
+
+  &__list {
+
+
+    &__item {
+      list-style: decimal;
+      margin: 10px 0;
+
+      &::marker {
+        color: rgba(255,255,255,0.5);
+        font-weight: bold;
+      }
+    }
+  }
+}
