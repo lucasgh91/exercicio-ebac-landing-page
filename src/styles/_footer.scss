@@ -1,12 +1,16 @@
 .footer {
-  background-color: black;
+  background-color: $background-footer;
 
   &__container {
-    padding: 1vw 0;
+    padding: 1vh 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     opacity: .7;
+
+    @include media(phone) {
+      padding: 0 0 3vh 0;
+    }
   }
 
   p {

@@ -1,11 +1,11 @@
 .movie-crew {
 
-  background-color: #292929;
+  background-color: $background-movie-crew;
   text-align: center;
 
   &__container {
     width: 100%;
-    padding: 5vw 10vw;
+    padding: 10vh;
 
     h2 {
       margin-bottom: 60px;
@@ -21,16 +21,23 @@
     row-gap: 60px;
 
     &__item {
-      width: 15%;
+      width: 180px;
       transition: transform 1s ease;
       cursor: pointer;
-      
+
+      @include media(phone) {
+        width: 140px;
+      }
 
       img {
         width: 100%;
         border-radius: 50%;
         margin-bottom: 20px;
         filter: grayscale(100%);
+
+        @include media(phone) {
+        filter: grayscale(0);
+        }
       }
 
       &:hover {

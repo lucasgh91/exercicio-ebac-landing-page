@@ -1,8 +1,8 @@
 .wallpapers {
-  background-color: #13151d;
+  background-color: $background-wallpapers;
 
   &__container {
-    padding: 5vw 10vw;
+    padding: 10vh;
   }
 
   h2 {
@@ -15,6 +15,11 @@
     display: none;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
+
+
+    @include media(phone) {
+      grid-template-columns: 1fr 1fr;
+    }
 
     &--is-active {
       display: grid;
@@ -44,8 +49,24 @@
 
       img {
         width: 100%;
-        height: 223px;
+        height: 400px;
         border-radius: 4px;
+
+        @include media(big-desktop-up) {
+          height: 250px;
+        }
+
+        @include media(desktop-up) {
+          height: auto;
+        }
+
+        @include media(desktop) {
+          height: 150px;
+        }
+
+        @include media(phone) {
+          height: auto;
+        }
       }
     }
   }
@@ -60,12 +81,12 @@
       padding-bottom: 5px;
       background: none;
       text-transform: uppercase;
-      margin: 0 1vw;
+      margin: 0 1vh;
       cursor: pointer;
       border-bottom: 5px solid transparent;
 
       &--is-active {
-        border-bottom: 5px solid rgba(255,255,255,0.5);
+        border-bottom: 5px solid $corTextoSecundario;
       }
     }
   }

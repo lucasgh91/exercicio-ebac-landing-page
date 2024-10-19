@@ -1,0 +1,33 @@
+@font-face {
+  font-family: Cocogoose;
+  src: url('../../assets/fonts/Cocogoose-Classic-Medium.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Cocogoose;
+  src: url('../../assets/fonts/Cocogoose-Classic-ExtraBold.ttf');
+  font-weight: 700;
+}
+
+@mixin media($size) {
+  @if $size == phone {
+    @media (max-width: 768px) { @content; }
+  } @else if $size == desktop {
+    @media (max-width: 1023px) { @content; }
+  } @else if $size == desktop-up {
+    @media (max-width: 1200px) { @content; }
+  } @else if $size == big-desktop-up {
+    @media (max-width: 1800px) { @content; }
+  }
+}
+  
+@mixin text($fontSize:16px) {
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
+}
+
+@mixin title($fontSize: 36px) {
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
+}

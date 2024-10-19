@@ -1,27 +1,58 @@
 .curiosities {
-  background-color: #4d4740;
+  background-color: $background-curiosities;
 
   &__container {
-    padding: 5vw 10vw;
+    padding: 10vh;
     display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: space-around;
 
-  &:hover {
-    img {
-      opacity: .4;
+    
+    @include media(desktop) {
+      flex-direction: column;
+      
     }
-  }
+
+    @include media(phone) {
+      flex-direction: column;
+    }
+
+    &:hover {
+      img {
+        opacity: .4;
+      }
+    }
   }
 
   h2 {
     margin-bottom: 40px;
+
+    @include media(desktop) {
+      text-align: center;
+      margin-top: 50px;
+    }
+    @include media(phone) {
+      text-align: center;
+      margin-top: 0;
+    }
   }
 
   img {
     height: auto;
     opacity: .2;
     transition: opacity .5s ease;
+
+    @include media(desktop-up) {
+      width: 300px;
+    }
+
+    @include media(desktop) {
+      width: 200px;
+    }
+    
+    @include media(phone) {
+      width: 100px;
+    }
   }
 
   &__list {
@@ -32,7 +63,7 @@
       margin: 10px 0;
 
       &::marker {
-        color: rgba(255,255,255,0.5);
+        color: $corTextoSecundario;
         font-weight: bold;
       }
     }

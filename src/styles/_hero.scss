@@ -2,12 +2,17 @@
   display: flex;
   flex-direction: column;
   background-image: url('../images/superman_hero.jpg');
-  min-height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 10%;
   position: relative;
   user-select: none;
+  height: 80vh;
+
+  @include media(phone) {
+    background-image: url('../images/superman_hero_mobile.jpg');
+    height: 500px;
+  }
 
   &::after {
     content: '';
@@ -17,19 +22,27 @@
 
   &__container {
     width: 100%;
-    height: 500px;
-    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(138,112,73,0) 29%);
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(138,112,73,0) 16%);
+
+    @include media(phone) {
+      background: none;
+    }
   }
 
   &__image {
     display: flex;
     position: relative;
-    max-width: 500px;
+    max-width: 300px;
     width: 100%;
     margin: 0 auto;
     align-items: center;
     top: calc(60% - 42px);
     transition: all .5s ease;
+
+    @include media(phone) {
+      max-width: 300px;
+    }
 
     &:hover {
       transform: scale(1.3);

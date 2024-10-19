@@ -1,6 +1,6 @@
 .faq {
-  padding: 5vw 10vw;
-  background-color: #040714;
+  padding: 10vh;
+  background-color: $background-faq;
 
   h2 {
     text-align: center;
@@ -16,7 +16,6 @@
       margin-bottom: 16px;
 
       &__question {
-        color: #fff;
         font-size: 20px;
         padding: 24px;
         display: block;
@@ -37,14 +36,9 @@
 
       &__answer {
         padding: 0 24px;
-        color: #c9c9c9;
         height: 0;
         overflow: hidden;
         transition: height, 1s ease;
-
-        a {
-          color: #c9c9c9;
-        }
 
         ul {
           margin-top: 20px;

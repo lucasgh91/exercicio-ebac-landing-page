@@ -1,51 +1,28 @@
-@use 'header';
-@use 'hero';
-@use 'description';
-@use 'trailer';
-@use 'faq';
-@use 'wallpapers';
-@use 'movie-crew';
-@use 'curiosities';
-@use 'footer';
+@import './configs/configs';
+@import './configs/variaveis';
 
-@font-face {
-  font-family: Cocogoose;
-  src: url(../../assets/fonts/Cocogoose-Classic-Medium.ttf);
-  font-weight: 400;
-}
+@import 'header';
+@import 'hero';
+@import 'description';
+@import 'trailer';
+@import 'faq';
+@import 'wallpapers';
+@import 'movie-crew';
+@import 'curiosities';
+@import 'footer';
 
-@font-face {
-  font-family: Cocogoose;
-  src: url(../../assets/fonts/Cocogoose-Classic-ExtraBold.ttf);
-  font-weight: 700;
-}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Cocogoose, sans-serif;
-  color: white;
+  color: $corTextoPrincipal;
   list-style: none;
-
-  &::selection {
-    background-color: rgba(0, 0, 0, 0.29);
-  }
 }
 
 body {
   overflow-x: hidden;
-}
-
-
-@mixin text($fontSize: 16px) {
-  font-size: $fontSize;
-  line-height: $fontSize + 10px;
-}
-
-@mixin title($fontSize: 36px) {
-  font-size: $fontSize;
-  line-height: $fontSize + 10px;
 }
 
 .text {
@@ -61,7 +38,7 @@ body {
 }
 
 .secondary-text {
-  color: rgba(255,255,255,0.5);
+  color: $corTextoSecundario;
 }
 
 .sans {

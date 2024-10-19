@@ -1,17 +1,27 @@
 .movie-description {
-  background-color: rgb(77,71,64);
+  background-color: $background-description;
   width: 100%;
 
   &__container {
     display: flex;
-    padding: 4vw;
+    padding: 10vh;
     column-gap: 40px;
+
+    @include media(phone) {
+      flex-direction: column;
+    }
   }
 
   &__watch,
   &__crews {
     flex: 1;
     margin-top: 50px;
+  }
+
+  &__watch {
+    @include media(phone) {
+      order: 1;
+    }
   }
 
   &__details {

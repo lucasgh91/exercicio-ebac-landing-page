@@ -7,8 +7,8 @@
   box-sizing: border-box;
 
   &__container {
-    background-color: rgba(74, 63, 54, .95);
-    padding: 5vw 10vw;
+    background-color: $background-trailer;
+    padding: 10vh;
     height: 100%;
   }
 
@@ -20,5 +20,10 @@ h2 {
     width: 600px;
     height: 350px;
     margin: 0 auto;
+
+    @include media(phone) {
+      width: 100%;
+      height: 300px;
+    }
   }
 }
